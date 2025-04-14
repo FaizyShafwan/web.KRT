@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KRT eSports</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="Brown Abstract The Lion Free Logo.png" alt="Logo KRT" class="team-logo" />
+    <h1>KRT eSports</h1>
+    <nav>
+      <ul>
+        <li onclick="toggleSection('nama')">Daftar Nama Pemain</li>
+        <li onclick="toggleSection('daftar')">Daftar Jadi Player</li>
+        <li onclick="toggleSection('tentang')">Tentang Tim</li>
+        <li onclick="toggleSection('sejarah')">Sejarah</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="nama" class="section">
+      <h2>Daftar Roster</h2>
+      <div class="player-list" id="playerList">
+        <!-- Pemain awal -->
+        <div class="player-card" onclick="openModal('ANTILS', 'Jungler', 'IMG-20250320-WA0012.jpg')">
+          <img src="IMG-20250320-WA0012.jpg" alt="Faizy" class="player-photo">
+          <h3>Faizy</h3><p>Jungler</p>
+        </div>
+        <div class="player-card" onclick="openModal('F x D', 'Roamer', 'IMG-20250413-WA0005.jpg')">
+          <img src="IMG-20250413-WA0005.jpg" alt="Ilham" class="player-photo">
+          <h3>Ilham</h3><p>Roamer</p>
+        </div>
+        <div class="player-card" onclick="openModal('bawang unggu', 'Goldlaner', 'IMG-20250413-WA0011.jpg')">
+          <img src="IMG-20250413-WA0011.jpg" alt="Ridwan" class="player-photo">
+          <h3>Ridwan</h3><p>Goldlaner</p>
+        </div>
+        <div class="player-card" onclick="openModal('DS laurent', 'Midlaner', 'IMG-20250413-WA0003.jpg')">
+          <img src="IMG-20250413-WA0003.jpg" alt="Altan" class="player-photo">
+          <h3>Altan</h3><p>Midlaner</p>
+        </div>
+        <div class="player-card" onclick="openModal('Nightmare', 'Explaner', 'IMG-20250413-WA0001.jpg')">
+          <img src="IMG-20250413-WA0001.jpg" alt="Azzam" class="player-photo">
+          <h3>Azzam</h3><p>Explaner</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="daftar" class="section">
+      <h2>Daftar Jadi Player</h2>
+      <form id="formDaftar">
+        <input type="text" id="namaPlayer" placeholder="Nama Player" required />
+        <input type="text" id="rolePlayer" placeholder="Role" required />
+        <input type="file" id="fotoPlayer" accept="image/*" required />
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <section id="tentang" class="section">
+      <h2>Tentang Tim</h2>
+      <p>KRT Squad adalah tim e-sport asal perkampungan di Indonesia yang berani, solid, dan selalu haus akan kemenangan. Kami adalah tim yang baru terbit dan masih perlu belajar dan masih berjuang untuk menjadi player profesional, serta pemain kami masih muda sekali dengan angka kelahiran dari 2009-2013!</p>
+    </section>
+
+    <section id="sejarah" class="section">
+      <h2>Sejarah Tim</h2>
+      <p>Berdiri sejak 2024, KRT memulai sebagai tim komunitas dan berkembang menjadi kekuatan besar dalam skena eSports berkat semangat juang yang tinggi.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 KRT eSports. All rights reserved.
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-nama"></h3>
+      <p id="modal-role"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
